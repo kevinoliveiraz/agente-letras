@@ -131,8 +131,8 @@ h3 { font-size:24px; /* Subtítulo */ }
 }
 
 /* Movimento contínuo apenas no catálogo da página inicial. */
-.agent-carousel { min-width:0; position:relative; display:flex; flex-direction:column; }
-.agent-carousel-window { flex:1; display:flex; min-width:0; overflow:hidden; padding-block:6px; margin-block:-6px; }
+.agent-carousel { min-width:0; align-self:start; position:relative; display:flex; flex-direction:column; }
+.agent-carousel-window { flex:0 0 auto; display:flex; min-width:0; overflow:hidden; padding-block:6px; margin-block:-6px; }
 .agent-carousel-window > .agent-grid { width:100%; }
 .agent-carousel.is-ready .agent-carousel-window {
   mask-image:linear-gradient(90deg,transparent,#000 18px,#000 calc(100% - 18px),transparent);
