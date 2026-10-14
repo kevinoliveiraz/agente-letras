@@ -34,3 +34,39 @@ document.querySelectorAll('[data-unavailable]').forEach((link) => { // Seleciona
     window.alert('Download ainda não configurado. Publique a versão no GitHub Releases e atualize o arquivo de configuração.'); // Explica a pendência.
   }); // Finaliza o evento.
 }); // Finaliza a seleção.
+
+// Repete os cartões para que o movimento horizontal volte ao início sem saltos.
+document.querySelectorAll('[data-agent-carousel]').forEach((carousel) => {
+  const viewport = carousel.querySelector('.agent-carousel-window');
+  const track = carousel.querySelector('.agent-grid');
+  const toggle = carousel.querySelector('.carousel-toggle');
+  const cards = Array.from(track.children);
+  if (cards.length < 2) return;
+
+  cards.forEach((card) => {
+    const clone = card.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    clone.setAttribute('data-carousel-clone', '');
+    clone.querySelectorAll('a').forEach((link) => link.setAttribute('tabindex', '-1'));
+    track.appendChild(clone);
+  });
+  carousel.classList.add('is-ready');
+
+  const updateDistance = () => {
+    const distance = track.children[cards.length].getBoundingClientRect().left - cards[0].getBoundingClientRect().left;
+    if (distance <= 0) return;
+    track.style.setProperty('--carousel-distance', `${distance}px`);
+    track.style.setProperty('--carousel-duration', `${distance / 28}s`);
+  };
+  updateDistance();
+  new ResizeObserver(updateDistance).observe(viewport);
+
+  toggle.addEventListener('click', () => {
+    const paused = carousel.classList.toggle('is-paused');
+    toggle.setAttribute('aria-pressed', String(paused));
+    toggle.textContent = paused ? 'Retomar movimento' : 'Pausar movimento';
+  });
+  viewport.addEventListener('focusout', (event) => {
+    if (!viewport.contains(event.relatedTarget)) viewport.scrollLeft = 0;
+  });
+});
