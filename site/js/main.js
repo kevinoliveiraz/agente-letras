@@ -39,7 +39,6 @@ document.querySelectorAll('[data-unavailable]').forEach((link) => { // Seleciona
 document.querySelectorAll('[data-agent-carousel]').forEach((carousel) => {
   const viewport = carousel.querySelector('.agent-carousel-window');
   const track = carousel.querySelector('.agent-grid');
-  const toggle = carousel.querySelector('.carousel-toggle');
   const cards = Array.from(track.children);
   if (cards.length < 2) return;
 
@@ -61,11 +60,6 @@ document.querySelectorAll('[data-agent-carousel]').forEach((carousel) => {
   updateDistance();
   new ResizeObserver(updateDistance).observe(viewport);
 
-  toggle.addEventListener('click', () => {
-    const paused = carousel.classList.toggle('is-paused');
-    toggle.setAttribute('aria-pressed', String(paused));
-    toggle.textContent = paused ? 'Retomar movimento' : 'Pausar movimento';
-  });
   viewport.addEventListener('focusout', (event) => {
     if (!viewport.contains(event.relatedTarget)) viewport.scrollLeft = 0;
   });
