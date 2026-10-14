@@ -76,6 +76,7 @@ h3 { font-size:24px; /* Subtítulo */ }
 .split-section p { color:var(--muted); /* Descrição */ max-width:580px; /* Linha */ }
 .visual-panel { background:#ead9cb; /* Fundo de imagem */ border-radius:14px; /* Cantos */ overflow:hidden; /* Recorte */ }
 .visual-panel img { width:100%; /* Ocupa */ }
+.home-page .visual-panel img { aspect-ratio:700 / 430; object-fit:cover; /* Mantém o tamanho do quadro ao trocar a imagem. */ }
 .values-grid { display:grid; /* Colunas */ grid-template-columns:repeat(4,1fr); /* Quatro */ gap:18px; /* Espaço */ }
 .value-card { padding:24px; /* Respiro */ border:1px solid var(--line); /* Borda */ border-radius:12px; /* Cantos */ background:#fffdfb; /* Fundo */ }
 .value-card h3 { margin:10px 0; /* Espaçamento */ font-size:21px; /* Título */ }
