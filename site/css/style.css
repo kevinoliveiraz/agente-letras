@@ -165,3 +165,41 @@ h3 { font-size:24px; /* Subtítulo */ }
   .agent-carousel.is-ready .agent-grid { display:grid; animation:none; transform:none; will-change:auto; }
   .agent-carousel [data-carousel-clone] { display:none; }
 }
+
+/* Realces suaves da página inicial, sem mudar a posição ou o tamanho dos textos. */
+.home-page :is(h1,h2,h3,p,strong,small) { transition:color .2s ease; }
+.home-page a:not(.btn) { transition:color .2s ease,border-color .2s ease; }
+.home-page .btn { transition:transform .2s ease,background-color .2s ease,border-color .2s ease,color .2s ease; }
+.home-page .agent-card { transition:transform .2s ease,border-color .2s ease,background-color .2s ease; }
+.home-page .agent-card .arrow { transition:color .2s ease,transform .2s ease; }
+.home-page .github-link { transition:opacity .2s ease; }
+.home-page .site-footer nav a {
+  background-image:linear-gradient(currentColor,currentColor);
+  background-repeat:no-repeat;
+  background-position:0 100%;
+  background-size:0% 1px;
+  transition:color .2s ease,background-size .2s ease;
+}
+.home-page .main-nav a:focus-visible,.home-page .text-link:focus-visible { color:#916247; border-color:#916247; }
+.home-page .btn-primary:focus-visible { background:#75472f; border-color:#75472f; }
+.home-page .btn-secondary:focus-visible { background:var(--cream); border-color:#b9a495; color:var(--brown); }
+.home-page .agent-card:focus-within { background:#fffaf5; border-color:#b9a495; }
+.home-page .agent-card:focus-within h3 { color:var(--brown); }
+.home-page .agent-card .arrow:focus-visible { color:#916247; transform:translateX(3px); }
+.home-page .site-footer nav a:focus-visible { color:#fff7ee; background-size:100% 1px; }
+@media(hover:hover) and (pointer:fine) {
+  .home-page :is(h1,h2,h3,p,strong,small):hover { color:var(--brown); }
+  .home-page .site-footer small:hover { color:#fff7ee; }
+  .home-page .main-nav a:hover,.home-page .text-link:hover { color:#916247; border-color:#916247; }
+  .home-page .btn-primary:hover { background:#75472f; border-color:#75472f; }
+  .home-page .btn-secondary:hover { background:var(--cream); border-color:#b9a495; color:var(--brown); }
+  .home-page .agent-card:hover { background:#fffaf5; }
+  .home-page .agent-card:hover :is(h3,p) { color:var(--brown); }
+  .home-page .agent-card .arrow:hover { color:#916247; transform:translateX(3px); }
+  .home-page .site-footer nav a:hover { color:#fff7ee; background-size:100% 1px; }
+  .home-page .github-link:hover { opacity:.75; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .home-page :is(h1,h2,h3,p,strong,small,a,.agent-card) { transition:none !important; }
+  .home-page .agent-card .arrow:is(:hover,:focus-visible) { transform:none; }
+}
