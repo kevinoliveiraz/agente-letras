@@ -1,12 +1,16 @@
-<div align="center"><img width="600" alt="Logo Agente Letras em branco" src="https://github.com/user-attachments/assets/f8141f91-e619-46b7-b55e-74315f25f14b" />
+<div align="center">
+
+<img width="600" alt="Logo Agente Letras em branco" src="https://github.com/user-attachments/assets/f8141f91-e619-46b7-b55e-74315f25f14b" />
 
 # Diferentes contextos. A mesma clareza.
 
 Um ecossistema de agentes especializados para orientar, revisar e aprimorar a escrita com inteligência artificial.
 
-</div>---
+</div>
 
-Sobre o Agente Letras
+---
+
+## Sobre o Agente Letras
 
 O Agente Letras é um projeto aberto e gratuito que reúne agentes de inteligência artificial especializados em diferentes tipos de escrita.
 
@@ -18,7 +22,7 @@ Uma mensagem informal, um trabalho acadêmico, uma documentação técnica e uma
 
 O Agente Letras não é um modelo de inteligência artificial independente. É um conjunto de skills estruturadas em arquivos, desenvolvidas para orientar o comportamento de assistentes de IA compatíveis.
 
-Como surgiu
+### Como surgiu
 
 O projeto nasceu da observação de um problema recorrente no uso da inteligência artificial para escrita: ao solicitar melhorias em um texto, a IA pode alterar excessivamente a linguagem, acrescentar informações não fornecidas ou substituir a forma de expressão original por uma escrita genérica.
 
@@ -30,82 +34,84 @@ O desenvolvimento combina conhecimentos de programação, organização de infor
 
 ---
 
-Conheça os agentes
+## Conheça os agentes
 
 O ecossistema reúne oito agentes especializados.
 
-Agente| Especialidade
-Acadêmico e ABNT| Trabalhos acadêmicos, linguagem científica, estrutura textual e normalização.
-Argumentativo| Organização de argumentos, coerência e desenvolvimento de ideias.
-Criativo e Literário| Narrativas, escrita criativa e expressão literária.
-Digital| Publicações para LinkedIn, redes sociais e conteúdos digitais.
-Formal| Comunicação institucional e adequação à linguagem formal.
-Informal| Mensagens, conversas e comunicação cotidiana.
-Profissional| E-mails, apresentações, currículos e comunicação profissional.
-Técnico e Didático| Documentação, tutoriais e explicações técnicas.
+| Agente | Especialidade |
+| --- | --- |
+| Acadêmico e ABNT | Trabalhos acadêmicos, linguagem científica, estrutura textual e normalização. |
+| Argumentativo | Organização de argumentos, coerência e desenvolvimento de ideias. |
+| Criativo e Literário | Narrativas, escrita criativa e expressão literária. |
+| Digital | Publicações para LinkedIn, redes sociais e conteúdos digitais. |
+| Formal | Comunicação institucional e adequação à linguagem formal. |
+| Informal | Mensagens, conversas e comunicação cotidiana. |
+| Profissional | E-mails, apresentações, currículos e comunicação profissional. |
+| Técnico e Didático | Documentação, tutoriais e explicações técnicas. |
 
 Cada agente possui instruções voltadas à sua especialidade, mas compartilha os princípios fundamentais do Agente Letras.
 
-Princípios do projeto
+## Princípios do projeto
 
-Preservação da voz do autor
+### Preservação da voz do autor
 
 O agente deve respeitar o estilo e a intenção de quem escreve.
 
 Uma revisão não deve transformar automaticamente um texto simples em uma comunicação excessivamente formal ou artificial.
 
-Fidelidade às informações
+### Fidelidade às informações
 
 O agente não deve apresentar como fatos experiências, resultados, acontecimentos ou informações que não foram fornecidos ou devidamente fundamentados.
 
-Clareza e precisão
+### Clareza e precisão
 
 As melhorias devem facilitar a compreensão do texto, corrigindo problemas quando necessário e evitando complexidade desnecessária.
 
-Adequação ao contexto
+### Adequação ao contexto
 
 Cada tipo de escrita possui necessidades próprias.
 
 O agente deve considerar a finalidade do texto, o público e o ambiente em que será utilizado.
 
-Transparência nas alterações
+### Transparência nas alterações
 
 Quando apropriado, o agente deve explicar as modificações realizadas e distinguir correções necessárias de sugestões de estilo.
 
-Autonomia do usuário
+### Autonomia do usuário
 
 A inteligência artificial deve auxiliar a escrita, preservando a participação e as decisões do autor.
 
 ---
 
-Como utilizar
+## Como utilizar
 
 O Agente Letras é distribuído em arquivos ZIP contendo instruções, documentação e materiais de configuração.
 
-1. Escolha um agente
+1. **Escolha um agente**
 
-Identifique a especialidade mais adequada ao texto que deseja produzir, revisar ou aprimorar.
+   Identifique a especialidade mais adequada ao texto que deseja produzir, revisar ou aprimorar.
 
-2. Acesse os arquivos
+2. **Acesse os arquivos**
 
-Entre no diretório correspondente ao agente escolhido ou utilize o pacote completo disponível no repositório.
+   Entre no diretório correspondente ao agente escolhido ou utilize o pacote completo disponível no repositório.
 
-3. Consulte a documentação
+3. **Consulte a documentação**
 
-Leia as instruções específicas do agente para entender sua finalidade e seus recursos.
+   Leia as instruções específicas do agente para entender sua finalidade e seus recursos.
 
-4. Configure na plataforma
+4. **Configure na plataforma**
 
-Utilize os arquivos conforme os recursos oferecidos pelo assistente de inteligência artificial escolhido.
+   Utilize os arquivos conforme os recursos oferecidos pelo assistente de inteligência artificial escolhido.
 
-5. Comece a escrever
+5. **Comece a escrever**
 
-Apresente o texto ou descreva seu objetivo, fornecendo as informações necessárias para orientar a atuação do agente.
+   Apresente o texto ou descreva seu objetivo, fornecendo as informações necessárias para orientar a atuação do agente.
 
 «Observação: a compatibilidade e a forma de configuração dependem da plataforma utilizada. O Agente Letras não garante funcionamento idêntico em todos os ambientes.»
 
-Estrutura do repositório
+## Estrutura do repositório
 
+```text
 agente-letras/
 ├── agente letras academico/
 ├── agente letras argumentativo/
@@ -122,40 +128,41 @@ agente-letras/
 ├── CONTRIBUTING.md
 ├── NOTICE.md
 └── LICENSE
+```
 
 Os diretórios organizam os agentes especializados, enquanto os arquivos da raiz apresentam a documentação geral do projeto.
 
 ---
 
-Exemplos de aplicação
+## Exemplos de aplicação
 
-Escrita profissional
+### Escrita profissional
 
 Aprimorar um texto de apresentação profissional, organizando as informações e melhorando a clareza sem inventar experiências ou resultados.
 
-Escrita acadêmica
+### Escrita acadêmica
 
 Auxiliar na organização de trabalhos acadêmicos, observando coerência, linguagem e orientações de normalização.
 
-Documentação técnica
+### Documentação técnica
 
 Revisar instruções e tutoriais para torná-los mais claros, mantendo a precisão das informações.
 
-Conteúdo digital
+### Conteúdo digital
 
 Melhorar publicações para o LinkedIn e outras plataformas, preservando a experiência e a intenção de quem escreve.
 
-Escrita criativa
+### Escrita criativa
 
 Auxiliar no desenvolvimento de narrativas, respeitando escolhas estilísticas e objetivos literários.
 
 ---
 
-Desenvolvedores
+## Desenvolvedores
 
 O Agente Letras reúne conhecimentos de tecnologia e linguagem.
 
-Kevin Cardoso de Oliveira
+### Kevin Cardoso de Oliveira
 
 Desenvolvimento, automação e tecnologia
 
@@ -167,7 +174,7 @@ No Agente Letras, atua na idealização, estruturação técnica, organização 
 
 GitHub: "@kevinoliveiraz" (https://github.com/kevinoliveiraz)
 
-Giovana
+### Giovana
 
 Letras e conhecimento linguístico
 
@@ -179,7 +186,7 @@ A proposta é aproximar conhecimentos técnicos e linguísticos para desenvolver
 
 ---
 
-Desenvolvimento e evolução
+## Desenvolvimento e evolução
 
 O Agente Letras é um projeto em desenvolvimento contínuo.
 
@@ -191,27 +198,29 @@ Entre as possibilidades de evolução estão:
 - Avaliação de compatibilidade com diferentes plataformas de inteligência artificial.
 - Desenvolvimento de um site oficial para apresentar os agentes, disponibilizar downloads e reunir a documentação.
 
-O histórico de alterações pode ser consultado em "CHANGELOG.md" (CHANGELOG.md).
+O histórico de alterações pode ser consultado em "[CHANGELOG.md](CHANGELOG.md)" (CHANGELOG.md).
 
-Como contribuir
+## Como contribuir
 
 O projeto está aberto a contribuições relacionadas à escrita, documentação, testes e melhorias nas instruções.
 
 É possível colaborar identificando problemas, sugerindo melhorias ou apresentando casos de teste.
 
-Antes de contribuir, consulte "CONTRIBUTING.md" (CONTRIBUTING.md).
+Antes de contribuir, consulte "[CONTRIBUTING.md](CONTRIBUTING.md)" (CONTRIBUTING.md).
 
-Licença e referências
+## Licença e referências
 
-O Agente Letras é disponibilizado sob a Licença Apache 2.0, conforme descrito no arquivo "LICENSE" (LICENSE).
+O Agente Letras é disponibilizado sob a Licença Apache 2.0, conforme descrito no arquivo "[LICENSE](LICENSE)" (LICENSE).
 
-Informações complementares sobre créditos e referências estão disponíveis em "NOTICE.md" (NOTICE.md).
+Informações complementares sobre créditos e referências estão disponíveis em "[NOTICE.md](NOTICE.md)" (NOTICE.md).
 
 Obras e materiais de terceiros mencionados como referência permanecem sujeitos aos direitos de seus respectivos autores e editoras. Sua citação não representa autorização para redistribuição.
 
 ---
 
-<div align="center">Agente Letras
+<div align="center">
+
+**Agente Letras**
 
 Textos melhores, com mais clareza.
 
