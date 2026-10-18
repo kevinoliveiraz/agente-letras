@@ -11,6 +11,7 @@
 .about-cover { display:block; width:100%; height:auto; aspect-ratio:4 / 3; object-fit:cover; border-radius:14px; background:var(--cream); }
 .about-caption { display:flex; justify-content:space-between; gap:20px; margin-top:12px; font-size:11px; color:var(--muted); }
 .about-caption span:first-child { color:#916247; letter-spacing:.16em; text-transform:uppercase; }
+.about-caption a { text-decoration:underline; text-underline-offset:3px; }
 .about-origin { padding-top:44px; }
 .about-origin-grid { display:grid; grid-template-columns:minmax(0,.94fr) minmax(0,1fr); gap:64px; align-items:start; padding-top:38px; border-top:1px solid var(--line); }
 .about-origin h2 { max-width:470px; }
