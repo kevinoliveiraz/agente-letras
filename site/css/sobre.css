@@ -1,0 +1,71 @@
+/* Página Sobre: linguagem editorial com os mesmos tokens e fontes do site. */
+.about-page main { overflow:hidden; }
+.about-page figure { margin:0; min-width:0; }
+.about-page a:focus-visible { outline:2px solid #916247; outline-offset:5px; }
+.about-hero { padding-block:58px 48px; }
+.about-hero-grid { display:grid; grid-template-columns:minmax(0,.94fr) minmax(0,1fr); align-items:center; gap:64px; }
+.about-hero h1 { max-width:560px; }
+.about-hero h1 em { color:#916247; font-weight:inherit; }
+.about-hero .lead { max-width:500px; margin-block:24px 28px; }
+.about-hero-note { margin:24px 0 0; font-size:12px; color:var(--muted); }
+.about-cover { display:block; width:100%; height:auto; aspect-ratio:4 / 3; object-fit:cover; border-radius:14px; background:var(--cream); }
+.about-caption { display:flex; justify-content:space-between; gap:20px; margin-top:12px; font-size:11px; color:var(--muted); }
+.about-caption span:first-child { color:#916247; letter-spacing:.16em; text-transform:uppercase; }
+.about-origin { padding-top:44px; }
+.about-origin-grid { display:grid; grid-template-columns:minmax(0,.94fr) minmax(0,1fr); gap:64px; align-items:start; padding-top:38px; border-top:1px solid var(--line); }
+.about-origin h2 { max-width:470px; }
+.about-origin-copy p { margin:0 0 18px; color:var(--muted); max-width:560px; }
+.about-origin-copy p:last-child { margin-bottom:0; }
+.about-lens-head { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:end; margin-bottom:36px; }
+.about-lens-head > p { margin:0; max-width:460px; color:var(--muted); }
+.about-lens-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:32px; }
+.about-lens-item { border-top:1px solid #d6c9be; padding-top:22px; }
+.about-lens-number { display:block; color:#916247; font-size:12px; letter-spacing:.12em; margin-bottom:22px; }
+.about-lens-item h3 { font-size:24px; }
+.about-lens-item p { margin:14px 0 0; color:var(--muted); font-size:15px; max-width:345px; }
+.about-care-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,.94fr); gap:64px; align-items:center; }
+.about-care .about-cover { aspect-ratio:4 / 3; }
+.about-care h2 { max-width:460px; }
+.about-principles { list-style:none; margin:28px 0 0; padding:0; }
+.about-principles li { display:grid; grid-template-columns:25px minmax(0,1fr); gap:14px; padding-block:17px; border-bottom:1px solid var(--line); }
+.about-principles li:first-child { padding-top:0; }
+.about-principles .icon { width:20px; height:20px; margin-top:2px; }
+.about-principles h3 { font:600 15px/1.5 Arial,Helvetica,sans-serif; }
+.about-principles p { margin:5px 0 0; color:var(--muted); font-size:14px; max-width:435px; }
+.about-open { padding-bottom:66px; }
+.about-open-inner { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); align-items:center; gap:64px; background:var(--cream); padding:44px; border:1px solid var(--line); border-radius:14px; }
+.about-open h2 { max-width:450px; }
+.about-open-copy > p { margin:0 0 23px; color:var(--muted); max-width:465px; }
+.about-open .hero-actions { align-items:center; gap:22px; }
+.about-page .text-link { transition:color .2s ease,transform .2s ease; }
+@media(hover:hover) and (pointer:fine) {
+  .about-page .text-link:hover { color:#916247; transform:translateX(2px); }
+  .about-page .btn-primary:hover { background:#75472f; border-color:#75472f; }
+  .about-page .btn-secondary:hover { background:var(--cream); border-color:#b9a495; }
+}
+@media(max-width:1100px) {
+  .about-hero-grid,.about-origin-grid,.about-lens-head,.about-care-grid,.about-open-inner { gap:36px; }
+  .about-lens-grid { gap:24px; }
+  .about-open-inner { padding:32px; }
+}
+@media(max-width:760px) {
+  .about-hero { padding-block:40px 0; }
+  .about-hero-grid,.about-origin-grid,.about-lens-head,.about-care-grid,.about-open-inner { grid-template-columns:minmax(0,1fr); gap:32px; }
+  .about-hero-copy { max-width:580px; }
+  .about-hero .lead { max-width:580px; margin-top:20px; }
+  .about-hero-note { margin-top:20px; }
+  .about-caption { gap:12px; font-size:10px; }
+  .about-origin { padding-top:40px; }
+  .about-origin-grid { padding-top:32px; gap:24px; }
+  .about-lens-head { gap:20px; margin-bottom:30px; }
+  .about-lens-grid { grid-template-columns:minmax(0,1fr); gap:28px; }
+  .about-lens-item { display:grid; grid-template-columns:30px minmax(0,1fr); column-gap:14px; padding-top:20px; }
+  .about-lens-number { grid-row:1 / 3; margin:5px 0 0; }
+  .about-lens-item p { max-width:none; margin-top:10px; }
+  .about-care .about-cover { aspect-ratio:4 / 3; }
+  .about-open { padding-bottom:45px; }
+  .about-open-inner { padding:28px 24px; gap:24px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .about-page :is(.btn,.text-link) { transition:none; transform:none; }
+}

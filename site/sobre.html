@@ -3,25 +3,115 @@
 <head> <!-- Início dos metadados. -->
 <meta charset="UTF-8"> <!-- Suporta caracteres do português. -->
 <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Adapta a telas pequenas. -->
-<meta name="description" content="Agente Letras: ecossistema de agentes especializados para apoiar a escrita em diferentes contextos."> <!-- Descrição para buscadores. -->
-<title>Sobre | Agente Letras</title> <!-- Título da aba. -->
+<meta name="description" content="Conheça a origem e os princípios do Agente Letras: um projeto aberto e gratuito para revisar e aprimorar textos, preservando a voz de quem escreve."> <!-- Descrição para buscadores. -->
+<title>Sobre o Agente Letras | Escrita com intenção</title> <!-- Título da aba. -->
 <link rel="icon" href="assets/img/brand/logo-simbolo.png" type="image/png"> <!-- Ícone da aba. -->
 <link rel="stylesheet" href="css/style.css"> <!-- Carrega estilos compartilhados. -->
+<link rel="stylesheet" href="css/sobre.css">
 <script defer src="js/main.js"></script> <!-- Carrega interações sem bloquear a página. -->
 </head> <!-- Fecha metadados. -->
-<body> <!-- Inicia o conteúdo. -->
+<body class="about-page"> <!-- Inicia o conteúdo. -->
 <header class="site-header"> <!-- Cabeçalho fixo. -->
 <div class="container header-inner"> <!-- Limita a largura do cabeçalho. -->
 <a class="brand" href="index.html" aria-label="Agente Letras — início"><img src="assets/img/brand/logo-horizontal.png" alt="Agente Letras"></a> <!-- Logo PNG recortada do pack visual aprovado. -->
 <nav class="main-nav" id="site-nav" aria-label="Navegação principal"><a href="index.html" class="" >Início</a><a href="sobre.html" class="active" aria-current="page">Sobre</a><a href="recursos.html" class="" >Recursos</a><a href="exemplos.html" class="" >Exemplos</a><a href="download.html" class="" >Download</a><a href="documentacao.html" class="" >Documentação</a></nav> <!-- Navegação desktop e mobile. -->
-<div class="header-actions"><a class="github-link" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="Abrir GitHub (endereço provisório)"><img class="icon github-icon" src="assets/img/icon-github.svg" alt="" aria-hidden="true"></a><a class="btn btn-primary" href="download.html"><img class="icon icon-light" src="assets/img/icon-download.svg" alt="" aria-hidden="true">Baixar agora</a><button class="menu-toggle" data-menu aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu"><img class="icon" src="assets/img/icon-menu.svg" alt="" aria-hidden="true"></button></div> <!-- Ações do cabeçalho. -->
+<div class="header-actions"><a class="github-link" href="https://github.com/kevinoliveiraz/agente-letras" target="_blank" rel="noopener noreferrer" aria-label="Abrir repositório do Agente Letras no GitHub"><img class="icon github-icon" src="assets/img/icon-github.svg" alt="" aria-hidden="true"></a><a class="btn btn-primary" href="download.html"><img class="icon icon-light" src="assets/img/icon-download.svg" alt="" aria-hidden="true">Baixar agora</a><button class="menu-toggle" data-menu aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu"><img class="icon" src="assets/img/icon-menu.svg" alt="" aria-hidden="true"></button></div> <!-- Ações do cabeçalho. -->
 </div> <!-- Fecha a largura do cabeçalho. -->
 </header> <!-- Fecha cabeçalho. -->
-<main id="conteudo"> <!-- Conteúdo principal. -->
-<section class="hero"><div class="container hero-inner"><div class="hero-copy"><p class="eyebrow">Sobre o projeto</p><h1>Mais do que correção.<br>Um ecossistema para escrever melhor.</h1><p class="lead">O Agente Letras reúne agentes especializados que apoiam a escrita em contextos diferentes, preservando a intenção de quem escreve.</p></div><img class="hero-art" src="assets/img/sobre-ilustracao.svg" alt="Representação visual do projeto Agente Letras"></div></section> <!-- Seção de conteúdo. -->
-<section class="section"><div class="container split-section"><div><p class="eyebrow">Origem</p><h2>Como tudo começou.</h2><p>O projeto começou com instruções voltadas à revisão e à melhoria de textos. Com o tempo, a necessidade de atender objetivos distintos levou à organização de agentes especializados.</p><p>Essa divisão permite orientar cada tipo de escrita com critérios e exemplos mais adequados ao contexto.</p></div><div><p class="eyebrow">Propósito</p><h2>Clareza para cada contexto.</h2><p>O objetivo é ajudar a estruturar, revisar e aprimorar textos com fidelidade ao sentido original, sem tratar toda situação de escrita da mesma maneira.</p><p>O agente apoia o trabalho de quem escreve; a decisão final continua com a pessoa.</p></div></div></section> <!-- Seção de conteúdo. -->
-<section class="section section-alt"><div class="container"><div class="section-head"><p class="eyebrow">Evolução</p><h2>De um agente a um ecossistema.</h2></div><div class="values-grid"><article class="value-card"><h3>01. A ideia</h3><p>Definir critérios para uma revisão textual mais consistente.</p></article><article class="value-card"><h3>02. A estrutura</h3><p>Organizar instruções e referências para reutilização.</p></article><article class="value-card"><h3>03. Especialização</h3><p>Separar necessidades por tipo de texto e objetivo.</p></article><article class="value-card"><h3>04. Evolução</h3><p>Documentar, testar e aperfeiçoar cada agente.</p></article></div></div></section> <!-- Seção de conteúdo. -->
-<section class="section"><div class="container split-section"><div><p class="eyebrow">Visão</p><h2>Continuar evoluindo.</h2><p>O Agente Letras é um projeto em desenvolvimento. Novos exemplos, critérios e melhorias podem ser incorporados com base em testes e contribuições.</p><a class="text-link" href="contribuir.html">Como contribuir →</a></div><div class="visual-panel"><img src="assets/img/hero-interface.svg" alt="Ecossistema digital de agentes especializados"></div></div></section> <!-- Seção de conteúdo. -->
+<main id="conteudo">
+  <section class="about-hero" aria-labelledby="sobre-titulo">
+    <div class="container about-hero-grid">
+      <div class="about-hero-copy">
+        <p class="eyebrow">Sobre o Agente Letras</p>
+        <h1 id="sobre-titulo">Sua voz,<br><em>em cada palavra.</em></h1>
+        <p class="lead">Um projeto aberto e gratuito que reúne agentes de inteligência artificial para revisar e aprimorar textos, respeitando o contexto e a intenção de quem escreve.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="download.html#agentes">Conhecer os agentes <img class="icon icon-light" src="assets/img/icon-arrow-right.svg" alt="" aria-hidden="true"></a>
+          <a class="btn btn-secondary" href="documentacao.html">Como funciona</a>
+        </div>
+        <p class="about-hero-note">Oito especialidades. Um compromisso com a sua escrita.</p>
+      </div>
+      <figure>
+        <img class="about-cover" src="assets/img/sobre-estudo-da-escrita.webp" width="1448" height="1086" alt="Composição editorial de manuscritos, fichas de palavras e anotações de revisão sobre papéis em tons creme." fetchpriority="high">
+        <figcaption class="about-caption"><span>Leitura · Contexto · Escrita</span><span>O cuidado começa no olhar.</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section about-origin" aria-labelledby="origem-titulo">
+    <div class="container">
+      <div class="about-origin-grid">
+        <div>
+          <p class="eyebrow">O ponto de partida</p>
+          <h2 id="origem-titulo">Melhorar o texto.<br>Preservar a intenção.</h2>
+        </div>
+        <div class="about-origin-copy">
+          <p>O Agente Letras nasceu de uma observação: ao melhorar um texto, a inteligência artificial pode mudar demais a linguagem, acrescentar informações ou apagar a forma de expressão de quem escreveu.</p>
+          <p>A proposta é orientar a revisão a partir do objetivo do texto. Uma conversa, um trabalho acadêmico e uma documentação técnica pedem cuidados diferentes.</p>
+          <p>Na prática, o projeto organiza instruções e materiais de apoio para assistentes de IA compatíveis. Os agentes especializados aplicam critérios conforme a finalidade da escrita.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt about-lens" aria-labelledby="olhar-titulo">
+    <div class="container">
+      <div class="about-lens-head">
+        <div>
+          <p class="eyebrow">Um olhar para a escrita</p>
+          <h2 id="olhar-titulo">Entre o sentido<br>e a forma.</h2>
+        </div>
+        <p>Revisar é ler com atenção: perceber o que as palavras dizem, como se relacionam e o que precisam comunicar.</p>
+      </div>
+      <div class="about-lens-grid">
+        <article class="about-lens-item">
+          <span class="about-lens-number" aria-hidden="true">01</span>
+          <h3>Linguagem e contexto</h3>
+          <p>O público, a situação e o propósito orientam as escolhas. A linguagem de uma mensagem cotidiana não precisa ser a mesma de um texto acadêmico.</p>
+        </article>
+        <article class="about-lens-item">
+          <span class="about-lens-number" aria-hidden="true">02</span>
+          <h3>Literatura e expressão</h3>
+          <p>Ritmo, estilo e escolhas de palavras também constroem sentido. Aprimorar a escrita exige reconhecer o espaço da expressão de cada autor.</p>
+        </article>
+        <article class="about-lens-item">
+          <span class="about-lens-number" aria-hidden="true">03</span>
+          <h3>Revisão e estrutura</h3>
+          <p>Gramática, coesão e organização ajudam o texto a cumprir seu objetivo. As mudanças devem facilitar a leitura e manter a intenção original.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about-care" aria-labelledby="principios-titulo">
+    <div class="container about-care-grid">
+      <figure>
+        <img class="about-cover" src="assets/img/sobre-texto-em-construcao.webp" width="1536" height="1024" alt="Detalhe de um rascunho com marcas de revisão e uma folha translúcida sobreposta, representando o processo de reescrita." loading="lazy" decoding="async">
+        <figcaption class="about-caption"><span>O texto em construção</span><span>Cada escolha tem um motivo.</span></figcaption>
+      </figure>
+      <div>
+        <p class="eyebrow">Princípios do projeto</p>
+        <h2 id="principios-titulo">Apoio para lapidar.<br>Liberdade para decidir.</h2>
+        <ul class="about-principles">
+          <li><img class="icon" src="assets/img/icon-check.svg" alt="" aria-hidden="true"><div><h3>Respeito à sua voz</h3><p>Buscar clareza sem transformar todo texto em uma escrita excessivamente formal ou artificial.</p></div></li>
+          <li><img class="icon" src="assets/img/icon-check.svg" alt="" aria-hidden="true"><div><h3>Fidelidade ao que você quis dizer</h3><p>Preservar as informações e o sentido original, sem acrescentar fatos que não foram fornecidos.</p></div></li>
+          <li><img class="icon" src="assets/img/icon-check.svg" alt="" aria-hidden="true"><div><h3>A decisão continua com você</h3><p>O agente orienta. Quem escreve avalia as sugestões e escolhe o que faz sentido manter.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-open" aria-labelledby="aberto-titulo">
+    <div class="container">
+      <div class="about-open-inner">
+        <div><p class="eyebrow">Aberto à colaboração</p><h2 id="aberto-titulo">A escrita evolui.<br>O projeto também.</h2></div>
+        <div class="about-open-copy">
+          <p>O Agente Letras está em desenvolvimento. Novos exemplos, referências e contribuições ajudam a aperfeiçoar as orientações e os agentes.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="download.html">Baixar os agentes <img class="icon icon-light" src="assets/img/icon-download.svg" alt="" aria-hidden="true"></a><a class="text-link" href="contribuir.html">Como contribuir →</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main> <!-- Encerra o conteúdo principal. -->
 <footer class="site-footer"> <!-- Rodapé compartilhado. -->
 <div class="container footer-inner"> <!-- Conteúdo do rodapé. -->
