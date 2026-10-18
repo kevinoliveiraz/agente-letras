@@ -28,13 +28,6 @@ tabButtons.forEach((button) => { // Percorre as abas.
     } // Encerra a verificação.
   }); // Finaliza o evento.
 }); // Finaliza o laço.
-document.querySelectorAll('[data-unavailable]').forEach((link) => { // Seleciona downloads ainda não configurados.
-  link.addEventListener('click', (event) => { // Intercepta o clique.
-    event.preventDefault(); // Evita navegar para um endereço inexistente.
-    window.alert('Download ainda não configurado. Publique a versão no GitHub Releases e atualize o arquivo de configuração.'); // Explica a pendência.
-  }); // Finaliza o evento.
-}); // Finaliza a seleção.
-
 // Repete os cartões para que o movimento horizontal volte ao início sem saltos.
 document.querySelectorAll('[data-agent-carousel]').forEach((carousel) => {
   const viewport = carousel.querySelector('.agent-carousel-window');
