@@ -1,29 +1,19 @@
-# Fotografias da página Sobre
+# Imagens da página Sobre
 
-As fotografias abaixo foram selecionadas no Pixabay para representar tipografia e escrita à mão. Não são imagens produzidas pelo Agente Letras.
+## Imagens ativas
 
-## Tipos móveis de impressão
+As imagens da página foram criadas com a ferramenta integrada imagegen, a partir de uma direção descritiva baseada em tipografia, materiais de impressão e no gesto de revisar um texto.
 
-- Arquivo: `sobre-tipos-moveis-pixabay.webp`
-- Autor: Willi Heidelbach (wilhei).
-- Página original: https://pixabay.com/pt/photos/escrita-conjunto-de-chumbo-705667/
-- Perfil: https://pixabay.com/pt/users/wilhei-883152/
-- Imagem de origem: https://cdn.pixabay.com/photo/2015/04/03/18/56/font-705667_1280.jpg
-- Dimensões: 1280 × 850.
+- `sobre-tipografia-autoral-v2.webp`: composição original de tipos móveis e prova tipográfica em papel.
+- `sobre-revisao-autoral-v2.webp`: cena original de revisão a lápis em um caderno.
 
-## Escrita à mão
+As imagens geradas foram exportadas em WebP para carregamento no site. O enquadramento responsivo é aplicado pelo CSS.
 
-- Arquivo: `sobre-escrita-a-mao-pixabay.webp`
-- Autor: picjumbo_com.
-- Página original: https://pixabay.com/pt/photos/f%C3%AAmea-di%C3%A1rio-escreva-lindo-865110/
-- Perfil: https://pixabay.com/pt/users/picjumbo_com-2130229/
-- Imagem de origem: https://cdn.pixabay.com/photo/2015/07/28/22/04/female-865110_1280.jpg
-- Dimensões: 1280 × 853.
+## Referências de pesquisa
 
-## Uso no site
+As fotografias abaixo foram consultadas apenas para analisar ideias de material, textura, luz e gesto. A versão atual da página não exibe essas fotografias nem apresenta as imagens geradas como obras dos fotógrafos.
 
-Ambas as páginas indicam uso gratuito sob a Licença de Conteúdo do Pixabay: https://pixabay.com/service/license-summary/.
+- Tipos móveis, de Willi Heidelbach (wilhei): https://pixabay.com/pt/photos/escrita-conjunto-de-chumbo-705667/
+- Escrita à mão, de picjumbo_com: https://pixabay.com/pt/photos/f%C3%AAmea-di%C3%A1rio-escreva-lindo-865110/
 
-As fotografias integram o conteúdo da página Sobre, com créditos visíveis e link para as páginas originais. Os arquivos foram convertidos para WebP para carregamento no site, sem filtros de cor ou alterações no conteúdo. O enquadramento responsivo é feito pelo CSS.
-
-As imagens anteriormente geradas para a página permanecem no histórico do projeto e não são usadas na versão atual de Sobre.
+As cenas novas têm objetos, composição e enquadramento próprios. As fotografias não foram fornecidas ao gerador como imagens a reproduzir ou editar.
