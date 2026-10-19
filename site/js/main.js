@@ -57,3 +57,111 @@ document.querySelectorAll('[data-agent-carousel]').forEach((carousel) => {
     if (!viewport.contains(event.relatedTarget)) viewport.scrollLeft = 0;
   });
 });
+
+// Movimento das páginas internas: conteúdo visível mesmo sem suporte às animações.
+(() => {
+  if (document.body.classList.contains('home-page') || !window.matchMedia) return;
+
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const animations = new Set();
+  const animationByElement = new WeakMap();
+  const revealed = new WeakSet();
+  let revealObserver;
+
+  const animateElement = (element, keyframes, options) => {
+    if (!element || motionPreference.matches || typeof element.animate !== 'function') return;
+
+    animationByElement.get(element)?.cancel();
+    const animation = element.animate(keyframes, {
+      easing: 'cubic-bezier(.22,1,.36,1)',
+      fill: 'backwards',
+      ...options
+    });
+    animations.add(animation);
+    animationByElement.set(element, animation);
+
+    const release = () => {
+      animations.delete(animation);
+      if (animationByElement.get(element) === animation) animationByElement.delete(element);
+    };
+    animation.addEventListener('finish', release, { once: true });
+    animation.addEventListener('cancel', release, { once: true });
+  };
+
+  const revealSelector = [
+    'main .page-intro',
+    'main .section-head',
+    'main .agent-card',
+    'main .value-card',
+    'main .step',
+    'main .tabs',
+    'main [data-example-title]',
+    'main .compare > article',
+    'main .notice',
+    'main .prose > :not(.steps)',
+    'main .download-box',
+    'main .about-hero-grid > *',
+    'main .about-origin-grid > *',
+    'main .about-lens-head > *',
+    'main .about-lens-item',
+    'main .about-care-grid > *',
+    'main .about-open-inner > *',
+    'main > .section > .container > :is(.eyebrow,h1,.lead,.btn)'
+  ].join(',');
+  const candidates = Array.from(document.querySelectorAll(revealSelector));
+  // Evita que um texto e seu contêiner recebam a mesma entrada duas vezes.
+  const revealElements = candidates.filter((element) =>
+    !candidates.some((parent) => parent !== element && parent.contains(element))
+  );
+
+  const observeSections = () => {
+    if (motionPreference.matches || !('IntersectionObserver' in window)) return;
+
+    revealObserver = new IntersectionObserver((entries) => {
+      const groups = new Map();
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const element = entry.target;
+        const position = groups.get(element.parentElement) || 0;
+        groups.set(element.parentElement, position + 1);
+        revealed.add(element);
+        revealObserver.unobserve(element);
+        animateElement(element, [
+          { opacity: 0, transform: 'translateY(14px)' },
+          { opacity: 1, transform: 'none' }
+        ], { duration: 520, delay: Math.min(position, 3) * 65 });
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -24px 0px' });
+
+    revealElements.forEach((element) => {
+      if (!revealed.has(element)) revealObserver.observe(element);
+    });
+  };
+
+  // A seleção e o conteúdo das abas continuam a cargo do comportamento original.
+  let selectedExample = document.querySelector('[data-tab][aria-selected="true"]')?.dataset.tab;
+  document.querySelectorAll('[data-tab]').forEach((button) => {
+    button.addEventListener('click', () => {
+      if (selectedExample === button.dataset.tab) return;
+      selectedExample = button.dataset.tab;
+      const panels = document.querySelectorAll('[data-example-title], .compare > article');
+      panels.forEach((panel, index) => animateElement(panel, [
+        { opacity: 0.45, transform: 'translateY(6px)' },
+        { opacity: 1, transform: 'none' }
+      ], { duration: 280, delay: index * 30 }));
+    });
+  });
+
+  const updateMotion = () => {
+    revealObserver?.disconnect();
+    if (motionPreference.matches) {
+      animations.forEach((animation) => animation.cancel());
+      animations.clear();
+    } else {
+      observeSections();
+    }
+  };
+  motionPreference.addEventListener?.('change', updateMotion);
+  observeSections();
+})();

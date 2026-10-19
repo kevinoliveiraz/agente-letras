@@ -207,3 +207,87 @@ h3 { font-size:24px; /* Subtítulo */ }
   .home-page :is(h1,h2,h3,p,strong,small,a,.agent-card) { transition:none !important; }
   .home-page :is(h1,h2,h3,p,strong,small,a,.agent-card) { transform:none !important; }
 }
+
+/* Transições consistentes nas páginas internas, sem alterar o espaço dos elementos. */
+body:not(.home-page) main :is(h1,h2,h3,p) {
+  transform-origin:left center;
+  transition:transform .22s ease;
+}
+body:not(.home-page) :is(.btn,.text-link,.tab,.main-nav a,.github-link,.menu-toggle) {
+  transition:transform .22s ease,background-color .2s ease,border-color .2s ease,color .2s ease,opacity .2s ease;
+}
+body:not(.home-page) :is(.agent-card,.value-card,.step) {
+  transition:transform .22s ease,border-color .22s ease,background-color .22s ease;
+}
+body:not(.home-page) .agent-card .arrow { transition:transform .22s ease,color .2s ease; }
+body:not(.home-page) :is(a,button,summary):focus-visible {
+  outline:2px solid #916247;
+  outline-offset:5px;
+}
+body:not(.home-page) .main-nav a:focus-visible { color:#916247; border-color:#916247; }
+body:not(.home-page) .btn-primary:focus-visible { background:#75472f; border-color:#75472f; }
+body:not(.home-page) .btn-secondary:focus-visible { background:var(--cream); border-color:#b9a495; }
+body:not(.home-page) .text-link:focus-visible { color:#916247; }
+body:not(.home-page) .tab:focus-visible { border-color:#916247; }
+body:not(.home-page) .agent-card:focus-within { background:#fffaf5; border-color:#b9a495; }
+body:not(.home-page) .site-footer nav a {
+  background-image:linear-gradient(currentColor,currentColor);
+  background-repeat:no-repeat;
+  background-position:0 100%;
+  background-size:0% 1px;
+  transition:color .2s ease,background-size .22s ease,transform .22s ease;
+}
+body:not(.home-page) .site-footer nav a:focus-visible { color:#fff7ee; background-size:100% 1px; }
+body:not(.home-page) .site-footer a:focus-visible { outline-color:#f6ede5; }
+body:not(.home-page) .faq details { transition:border-color .22s ease; }
+body:not(.home-page) .faq summary { transition:color .2s ease,transform .22s ease; }
+body:not(.home-page) .faq details[open] { border-color:#b9a495; }
+body:not(.home-page) .faq details[open] > summary { color:var(--brown); }
+body:not(.home-page) .faq details[open] > :not(summary) { animation:faq-answer-enter .26s ease-out; }
+@keyframes faq-answer-enter {
+  from { opacity:0; transform:translateY(5px); }
+  to { opacity:1; transform:none; }
+}
+@media(hover:hover) and (pointer:fine) {
+  body:not(.home-page) main :is(h1,h2,h3,p):hover { transform:translateX(1px) scale(1.018); }
+  body:not(.home-page) main :is(h1,h2,h3):hover { transform:translateX(1px) scale(1.025); }
+  body:not(.home-page) .btn:hover { transform:translateY(-2px) scale(1.02); }
+  body:not(.home-page) .btn-primary:hover { background:#75472f; border-color:#75472f; }
+  body:not(.home-page) .btn-secondary:hover { background:var(--cream); border-color:#b9a495; }
+  body:not(.home-page) .text-link:hover { color:#916247; transform:translateX(2px); }
+  body:not(.home-page) .main-nav a:hover { color:#916247; transform:translateY(-1px); }
+  body:not(.home-page) .github-link:hover { opacity:.72; transform:translateY(-1px); }
+  body:not(.home-page) .menu-toggle:hover { transform:translateY(-1px); }
+  body:not(.home-page) :is(.agent-card,.value-card):hover { transform:translateY(-3px); border-color:#b9a495; background:#fffaf5; }
+  body:not(.home-page) .step:hover { transform:translateX(3px); border-color:#b9a495; }
+  body:not(.home-page) .agent-card .arrow:hover { transform:translateX(3px); color:#916247; }
+  body:not(.home-page) .tab:hover { transform:translateY(-1px); border-color:#b9a495; }
+  body:not(.home-page) .tab:not([aria-selected="true"]):hover { background:var(--cream); }
+  body:not(.home-page) .faq summary:hover { color:#916247; transform:translateX(2px); }
+  body:not(.home-page) .site-footer nav a:hover { color:#fff7ee; background-size:100% 1px; transform:translateY(-1px); }
+}
+@media(max-width:760px) and (prefers-reduced-motion:no-preference) {
+  body:not(.home-page) .main-nav {
+    display:flex;
+    visibility:hidden;
+    opacity:0;
+    transform:translateY(-6px);
+    pointer-events:none;
+    transition:opacity .18s ease,transform .18s ease,visibility 0s linear .18s;
+  }
+  body:not(.home-page) .main-nav.is-open {
+    visibility:visible;
+    opacity:1;
+    transform:none;
+    pointer-events:auto;
+    transition-delay:0s;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
+  body:not(.home-page) *,body:not(.home-page) *::before,body:not(.home-page) *::after {
+    animation:none !important;
+    transition:none !important;
+  }
+  body:not(.home-page) :is(h1,h2,h3,p,a,button,.agent-card,.value-card,.step,summary) { transform:none !important; }
+}
